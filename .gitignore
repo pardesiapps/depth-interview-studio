@@ -1,0 +1,14 @@
+node_modules/
+dist/
+.local-data/
+.sites-runtime/
+.openai/hosting.json
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.docx
+*.pdf
+.DS_Store

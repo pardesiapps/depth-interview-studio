@@ -1,0 +1,16 @@
+{
+  "name": "depth-interview-studio-template",
+  "version": "1.0.0",
+  "private": true,
+  "description": "A personal-data-free interview studio starter and design system for AI-guided setup.",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "start": "node scripts/preview.mjs",
+    "tokens": "node scripts/extract-tokens.mjs",
+    "check": "node scripts/check.mjs",
+    "build": "node scripts/build-tracker.mjs",
+    "theme:import": "node scripts/import-theme.mjs"
+  }
+}
