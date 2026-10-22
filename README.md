@@ -12,11 +12,11 @@ Build and show the homepage before asking for personal/employer details and rés
 
 ## What stays consistent
 
-- Five palettes: Green, Blue, Purple, Amber and Grey; light and dark modes.
+- Five palettes: Green, Blue, Purple, Amber and Grey; light and dark modes with neutral charcoal dark surfaces.
 - Default, Playful and Calm style variants.
 - DM Sans body text, Manrope headings, Nunito for selected playful treatments.
 - Practice cards, detailed explanations, code samples, copy controls, signature blocks and application tracking.
-- Responsive layout, readable typography, keyboard navigation, visible focus, reduced motion and outline copy buttons.
+- Responsive layout, readable typography, keyboard navigation, visible focus, reduced motion and outline copy buttons with animated checkmark feedback.
 
 The starter includes a 50-question Java/Spring sample deck. Replace the content for another profession; preserve the design. My Details uses fictional placeholders, no résumé is bundled, and Applications starts empty.
 

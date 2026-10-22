@@ -44,9 +44,11 @@ $('copy-question').addEventListener('click',async()=>{
     button.disabled=true;
     clearTimeout(copyFeedbackTimer);
     $('copy-status').textContent='';
+    $('copy-status').classList.remove('copy-success-announcement');
     try {
         await navigator.clipboard.writeText(question.title);
         if(current.id===question.id){
+            $('copy-status').classList.add('copy-success-announcement');
             $('copy-status').textContent='Copied!';
             button.classList.add('copied');
         }
@@ -62,6 +64,6 @@ $('copy-question').addEventListener('click',async()=>{
         button.disabled=false;
         copyFeedbackTimer=setTimeout(()=>{
             $('copy-status').textContent='';button.classList.remove('copied');
-        },4000);
+        },2000);
     }
 });

@@ -14,7 +14,7 @@ Practice progress is browser-local and may be exported/reset; label it according
 
 ## Copy
 
-Outline button: transparent center; accent-colored icon strokes, border and text. Provide an accessible name even for icon-only buttons. Use the Clipboard API on the user's click and announce success through a polite live region. Provide a selected-text dialog when clipboard access fails. Copy full question text or the exact requested field; copied URLs must not include decorative arrows. Preserve address line breaks and email formatting.
+Outline button: transparent center; accent-colored icon strokes, border and text. On clipboard success, swap the copy icon for a theme-colored checkmark and show a “Copied!” tooltip for two seconds, then reset. Use subtle fade/scale and check-stroke drawing; disable animations for reduced motion. Never show success before the clipboard write succeeds. Provide an accessible name even for icon-only buttons. Use the Clipboard API on the user's click and announce success through a polite live region. Provide a selected-text dialog when clipboard access fails. Copy full question text or the exact requested field; copied URLs must not include decorative arrows. Preserve address line breaks and email formatting.
 
 ## Details
 

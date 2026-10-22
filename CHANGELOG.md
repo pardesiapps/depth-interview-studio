@@ -1,5 +1,13 @@
 # Changelog
 
+## 1.0.1
+
+- Every dark palette uses the same neutral charcoal page/card surfaces while preserving its accent color.
+
+- Copy-success feedback swaps the outline icon for a theme-colored animated checkmark and a brief “Copied!” tooltip.
+- Icons reset after two seconds; clipboard failures retain the original icon and fallback.
+- Reduced-motion preference disables transitions and checkmark drawing.
+
 ## 1.0.0
 
 - Personal-data-free three-page Interview Studio starter.

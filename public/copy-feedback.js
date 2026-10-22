@@ -1,0 +1,30 @@
+'use strict';
+// Success is set by the existing clipboard handler, never by the click itself.
+document.querySelectorAll('#copy-question,[data-copy-target]').forEach(button=>{
+    const original=button.querySelector('svg');
+    if(!original||button.querySelector('.copy-icon'))return;
+    const wrapper=document.createElement('span');
+    wrapper.className='copy-icon';
+    wrapper.setAttribute('aria-hidden','true');
+    wrapper.style.width=(Number(original.getAttribute('width'))||18)+'px';
+    wrapper.style.height=(Number(original.getAttribute('height'))||18)+'px';
+    original.classList.add('copy-icon-original');
+    original.before(wrapper);wrapper.append(original);
+    const check=document.createElementNS('http://www.w3.org/2000/svg','svg');
+    check.setAttribute('viewBox','0 0 24 24');
+    check.setAttribute('fill','none');
+    check.setAttribute('aria-hidden','true');
+    check.classList.add('copy-icon-check');
+    const path=document.createElementNS('http://www.w3.org/2000/svg','path');
+    path.setAttribute('d','M5 12.5 9.5 17 19 7');
+    path.setAttribute('stroke','currentColor');
+    path.setAttribute('stroke-width','2');
+    path.setAttribute('stroke-linecap','round');
+    path.setAttribute('stroke-linejoin','round');
+    check.append(path);wrapper.append(check);
+    const tooltip=document.createElement('span');
+    tooltip.className='copy-tooltip';
+    tooltip.setAttribute('aria-hidden','true');
+    tooltip.textContent='Copied!';
+    button.append(tooltip);
+});

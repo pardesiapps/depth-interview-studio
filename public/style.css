@@ -85,3 +85,24 @@ header{height:62px}.intro{display:flex;justify-content:space-between;gap:24px;pa
 .detail-copy,.copy-question{background:transparent!important;color:var(--accent)!important;border-color:var(--accent)!important;opacity:1}.detail-copy:hover,.copy-question:hover{background:var(--accent-soft)!important;color:var(--accent-hover)!important;border-color:var(--accent-hover)!important}.detail-copy.copied,.copy-question.copied{background:transparent!important;color:var(--accent)!important;outline:2px solid var(--accent);outline-offset:2px}.detail-copy:disabled,.copy-question:disabled{opacity:.5}
 
 #employer-address{white-space:pre-line}
+
+/* Clipboard success: swap the outline copy icon for a brief themed checkmark. */
+.detail-copy,.copy-question{position:relative}
+.copy-icon{display:inline-block;position:relative;flex:none;vertical-align:middle}
+.copy-icon>svg{position:absolute;inset:0;width:100%;height:100%;margin:0;transition:opacity 120ms ease,transform 160ms ease}
+.copy-icon-original{opacity:1;transform:scale(1)}
+.copy-icon-check{opacity:0;transform:scale(.8)}
+.copy-icon-check path{stroke-dasharray:24;stroke-dashoffset:24}
+.copied .copy-icon-original{opacity:0;transform:scale(.8)}
+.copied .copy-icon-check{opacity:1;transform:scale(1)}
+.copied .copy-icon-check path{animation:copy-check-draw 220ms ease-out forwards}
+.copy-tooltip{position:absolute;right:0;bottom:calc(100% + 8px);padding:6px 9px;border-radius:6px;background:var(--ink);color:var(--paper);font-size:12px;font-weight:500;line-height:1.4;white-space:nowrap;pointer-events:none;opacity:0;transform:translateY(3px);transition:opacity 120ms ease,transform 120ms ease;z-index:10}
+.copied .copy-tooltip{opacity:1;transform:translateY(0)}
+.detail-copy.copied:not(:focus-visible),.copy-question.copied:not(:focus-visible){outline:none;box-shadow:none}
+@keyframes copy-check-draw{to{stroke-dashoffset:0}}
+@media(prefers-reduced-motion:reduce){.copy-icon>svg,.copy-tooltip{transition:none;transform:none}.copied .copy-icon-check path{animation:none;stroke-dashoffset:0}}
+
+/* Keep success announcements available to assistive technology without a duplicate toast. */
+.copy-success-announcement{position:absolute!important;width:1px!important;height:1px!important;padding:0!important;margin:-1px!important;overflow:hidden!important;clip-path:inset(50%)!important;white-space:nowrap!important;border:0!important;box-shadow:none!important}
+/* All dark palettes share neutral surfaces; only accents carry the selected hue. */
+:root[data-mode=dark][data-theme]{--paper:#121417;--surface:#1b1f25;--ink:#e6e8ec;--muted:#a5acb8;--line:#343941;--body-text:#c9ced7;--browse:#171b20;--track:#343b45;--accent-soft:#262c34;--accent-tint:#20252c;--accent-line:#3b434f}

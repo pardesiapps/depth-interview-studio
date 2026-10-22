@@ -55,9 +55,10 @@ document.querySelectorAll('[data-copy-target]').forEach(button=>{
         try {
             await navigator.clipboard.writeText(text);
             button.classList.add('copied');
-            status.textContent='Copied to clipboard';
-            announcementTimer=setTimeout(()=>status.textContent='',3000);
-            copyTimers.set(button,setTimeout(()=>button.classList.remove('copied'),3000));
+            status.classList.add('copy-success-announcement');
+            status.textContent='Copied!';
+            announcementTimer=setTimeout(()=>status.textContent='',2000);
+            copyTimers.set(button,setTimeout(()=>button.classList.remove('copied'),2000));
         } catch {
             const field=manualDialog.querySelector('textarea');
             field.value=text;

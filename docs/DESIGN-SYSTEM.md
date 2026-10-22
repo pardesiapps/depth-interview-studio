@@ -1,4 +1,4 @@
-# Depth design system — 1.0.0
+# Depth design system — 1.0.1
 
 The live visual authority is public/style.css, with application-page additions in public/applications.css. Its cascade deliberately preserves the established studio appearance. Do not re-create the design from a prose approximation or run an unsolicited visual redesign.
 
@@ -8,7 +8,7 @@ Set data-theme to green, blue, purple, amber or grey on the root element. Set da
 
 Use semantic variables: --paper (page), --surface (cards; light fallback white), --ink (primary text), --muted (supporting text), --line (structural borders), --accent and --accent-hover (actions), --on-accent (contrast on filled primary actions), --accent-soft (subtle hover/selection), --accent-tint (explanation surfaces), --accent-mid and --accent-line (emphasis/borders), --body-text (explanation prose), --browse and --track. --green is a legacy alias used by existing components, including non-green themes. Do not hard-code a green action in a different palette.
 
-Resolved values for all five light and five dark palettes are in theme/palettes.json. They are derived from the root CSS cascade using npm run tokens; do not hand-edit this generated file. A palette preference should apply consistently on every page. Palette colors do not independently encode application status.
+Resolved values for all five light and five dark palettes are in theme/palettes.json. They are derived from the root CSS cascade using npm run tokens; do not hand-edit this generated file. All dark palettes share neutral charcoal page/card surfaces; theme hue belongs to accent text, icon strokes, borders and actions rather than the page background. A palette preference should apply consistently on every page. Palette colors do not independently encode application status.
 
 ## Typography
 
@@ -24,7 +24,7 @@ Use existing component paddings rather than reducing whitespace to fit more cont
 
 ## Components
 
-Primary buttons are filled with --accent and use --on-accent. Quiet buttons have structural borders and gain a subtle accent-soft hover. Copy buttons are OUTLINED: transparent background, theme-colored icon strokes, border and label. Their interior remains transparent when copied; a visible ring and live confirmation communicate success. Hover may use a subtle theme tint, not a solid fill. Disabled controls alone use lower opacity.
+Primary buttons are filled with --accent and use --on-accent. Quiet buttons have structural borders and gain a subtle accent-soft hover. Copy buttons are OUTLINED: transparent background, theme-colored icon strokes, border and label. Their interior remains transparent when copied; a brief checkmark, “Copied!” tooltip and live confirmation communicate success. Hover may use a subtle theme tint, not a solid fill. Disabled controls alone use lower opacity.
 
 Question cards contain metadata, title, copy, reveal and structured answer blocks. Scenario panels are secondary surfaces with the existing accent treatment. Code panels use a language badge, title, scrollable monospace content, explanation and caveat.
 
