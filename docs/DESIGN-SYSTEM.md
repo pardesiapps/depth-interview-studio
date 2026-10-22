@@ -1,4 +1,4 @@
-# Depth design system — 1.0.1
+# Depth design system — 1.0.2
 
 The live visual authority is public/style.css, with application-page additions in public/applications.css. Its cascade deliberately preserves the established studio appearance. Do not re-create the design from a prose approximation or run an unsolicited visual redesign.
 
@@ -39,3 +39,5 @@ Default preserves the established question title treatment and compact structure
 ## Changes
 
 Read docs/UPGRADING.md. Change semantic tokens before individual components where practical. Check every palette/mode combination after color edits, and all three variants after layout/typography changes. Visual consistency does not by itself establish WCAG contrast compliance; measure contrast for changed text/action combinations before claiming compliance.
+
+Header links and the appearance control use the shared --control-font and --control-weight style tokens: DM Sans 600 by default, Nunito 800 in Playful, and DM Sans 500 in Calm. Desktop size is 13px; compact size is 12px. Active-page color changes do not override the shared font treatment.

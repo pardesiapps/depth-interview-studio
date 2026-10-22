@@ -106,3 +106,9 @@ header{height:62px}.intro{display:flex;justify-content:space-between;gap:24px;pa
 .copy-success-announcement{position:absolute!important;width:1px!important;height:1px!important;padding:0!important;margin:-1px!important;overflow:hidden!important;clip-path:inset(50%)!important;white-space:nowrap!important;border:0!important;box-shadow:none!important}
 /* All dark palettes share neutral surfaces; only accents carry the selected hue. */
 :root[data-mode=dark][data-theme]{--paper:#121417;--surface:#1b1f25;--ink:#e6e8ec;--muted:#a5acb8;--line:#343941;--body-text:#c9ced7;--browse:#171b20;--track:#343b45;--accent-soft:#262c34;--accent-tint:#20252c;--accent-line:#3b434f}
+
+/* Navigation typography follows the selected visual style on every page. */
+:root[data-style=playful]{--control-font:Nunito,system-ui,sans-serif;--control-weight:800}
+:root[data-style=calm]{--control-font:'DM Sans',system-ui,sans-serif;--control-weight:500}
+.header-controls .header-link,.header-controls .appearance-toggle{font-family:var(--control-font,'DM Sans',system-ui,sans-serif);font-weight:var(--control-weight,600);font-size:13px;line-height:1.4;letter-spacing:0;font-style:normal}
+@media(max-width:600px){.header-controls .header-link,.header-controls .appearance-toggle{font-size:12px}}

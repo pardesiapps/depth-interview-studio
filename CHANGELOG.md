@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.0.2
+
+- Header navigation and appearance controls share typography across all pages.
+- Playful uses rounded Nunito; Default and Calm use the matching DM Sans control treatment.
+
 ## 1.0.1
 
 - Every dark palette uses the same neutral charcoal page/card surfaces while preserving its accent color.
