@@ -1,6 +1,6 @@
 {
   "name": "depth-interview-studio-template",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "private": true,
   "description": "A personal-data-free interview studio starter and design system for AI-guided setup.",
   "engines": {

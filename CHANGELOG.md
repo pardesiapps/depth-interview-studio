@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.0.3
+
+- Copy controls are icon-only, without visible button borders or labels.
+- Theme-colored icons, checkmark feedback, tooltips, accessible names and 44px hit areas are preserved.
+
 ## 1.0.2
 
 - Header navigation and appearance controls share typography across all pages.

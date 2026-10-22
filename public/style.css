@@ -112,3 +112,8 @@ header{height:62px}.intro{display:flex;justify-content:space-between;gap:24px;pa
 :root[data-style=calm]{--control-font:'DM Sans',system-ui,sans-serif;--control-weight:500}
 .header-controls .header-link,.header-controls .appearance-toggle{font-family:var(--control-font,'DM Sans',system-ui,sans-serif);font-weight:var(--control-weight,600);font-size:13px;line-height:1.4;letter-spacing:0;font-style:normal}
 @media(max-width:600px){.header-controls .header-link,.header-controls .appearance-toggle{font-size:12px}}
+
+/* Copy controls show only the theme-colored icon; their transparent hit area stays 44px. */
+.detail-copy[data-copy-target],#copy-question{border:0!important;background:transparent!important;box-shadow:none!important;min-width:44px;min-height:44px;width:44px;height:44px;padding:10px;gap:0;justify-content:center}
+.detail-copy[data-copy-target]>span:not(.copy-icon):not(.copy-tooltip){display:none}
+.detail-copy[data-copy-target]:hover,#copy-question:hover{background:var(--accent-soft)!important}

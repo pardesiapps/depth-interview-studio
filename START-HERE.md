@@ -8,7 +8,7 @@ Read AGENTS.md and docs/AGENT-SETUP.md, inspect the working pages, then begin wi
 
 Wait for the answer. Complete the homepage before asking for personal information. Complete My Details before asking about Gmail.
 
-Keep Cloudflare storage as the default. Preserve the design system and apply the supplied outline copy-button style. The user's job content and accounts are the customization; the visual system is the standard.
+Keep Cloudflare storage as the default. Preserve the design system and apply the supplied icon-only copy-button style. The user's job content and accounts are the customization; the visual system is the standard.
 
 If you cannot access or edit the repository in your current environment, say so plainly and guide the user to a coding-capable ChatGPT workspace with repository access. A pasted link cannot grant private repository access, provider consent or hosting capabilities.
 

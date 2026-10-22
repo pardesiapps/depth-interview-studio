@@ -1,4 +1,4 @@
-# Depth design system — 1.0.2
+# Depth design system — 1.0.3
 
 The live visual authority is public/style.css, with application-page additions in public/applications.css. Its cascade deliberately preserves the established studio appearance. Do not re-create the design from a prose approximation or run an unsolicited visual redesign.
 
@@ -24,7 +24,7 @@ Use existing component paddings rather than reducing whitespace to fit more cont
 
 ## Components
 
-Primary buttons are filled with --accent and use --on-accent. Quiet buttons have structural borders and gain a subtle accent-soft hover. Copy buttons are OUTLINED: transparent background, theme-colored icon strokes, border and label. Their interior remains transparent when copied; a brief checkmark, “Copied!” tooltip and live confirmation communicate success. Hover may use a subtle theme tint, not a solid fill. Disabled controls alone use lower opacity.
+Primary buttons are filled with --accent and use --on-accent. Quiet buttons have structural borders and gain a subtle accent-soft hover. Copy buttons are ICON-ONLY: transparent background and theme-colored icon strokes, without visible borders or labels. Preserve accessible names and a 44px transparent hit area. Their interior remains transparent when copied; a brief checkmark, “Copied!” tooltip and live confirmation communicate success. Hover may use a subtle theme tint, not a solid fill. Disabled controls alone use lower opacity.
 
 Question cards contain metadata, title, copy, reveal and structured answer blocks. Scenario panels are secondary surfaces with the existing accent treatment. Code panels use a language badge, title, scrollable monospace content, explanation and caveat.
 
